@@ -12,12 +12,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Search"
-    android:textColor="@android:color/black"
-android:singleLine="true"/>
+            android:textColor="@android:color/black"
+            android:singleLine="true"/>
 
-    <fragment
+
+    <com.google.android.gms.maps.MapView
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:id="@+id/frg"
+            android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 </LinearLayout>
