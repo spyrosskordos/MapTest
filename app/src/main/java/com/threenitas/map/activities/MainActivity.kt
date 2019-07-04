@@ -20,7 +20,7 @@ import com.threenitas.map.fragments.HistoryFragment
 import com.threenitas.map.R
 import com.threenitas.map.fragments.MapFragment
 import kotlinx.android.synthetic.main.activity_main.*
-
+import android.support.v4.app.ActivityCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mapFrg : SupportMapFragment
     lateinit var googleMap: GoogleMap
+
     init {
         mapFragment =MapFragment()
         historyFragment= HistoryFragment()
@@ -38,28 +39,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//    mapFrg=supportFragmentManager.findFragmentById(R.id.frg1) as SupportMapFragment
-//        mapFrg.getMapAsync(OnMapReadyCallback {
-//            googleMap = it
-//            Log.d("GoogleMap", "before isMyLocationEnabled")
-////            googleMap.isMyLocationEnabled = true
-//            val location1 = LatLng(13.0356745,77.5881522)
-//            googleMap.addMarker(MarkerOptions().position(location1).title("My Location"))
-//            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location1,5f))
-//
-//            Log.d("GoogleMap", "before location2")
-//            val location2 = LatLng(9.89,78.11)
-//            googleMap.addMarker(MarkerOptions().position(location2).title("Madurai"))
-//
-//            Log.d("GoogleMap", "before location3")
-//
-//            val location3 = LatLng(13.029727,77.5933021)
-//            googleMap.addMarker(MarkerOptions().position(location3).title("Bangalore"))
-//
-//
-//
-//
-//        })
+
          //Configure action bar
         setSupportActionBar(toolbar)
         val actionBar = supportActionBar
